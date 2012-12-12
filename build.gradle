@@ -10,11 +10,11 @@ repositories {
 }
 
 dependencies { 
-	groovy "org.codehaus.groovy:groovy:1.8.8"
+  groovy "org.codehaus.groovy:groovy:1.8.8"
 }
 
 
 task wrapper(type: Wrapper) {
-	gradleVersion = '1.3'
+  gradleVersion = '1.3'
   jarFile = '.gradle/wrapper/gradle-wrapper.jar'
 }
