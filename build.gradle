@@ -1,0 +1,20 @@
+
+apply plugin: 'groovy'
+
+repositories { 
+  maven { 
+    credentials.username = artifactoryReader
+    credentials.password = artifactoryReaderPwd
+    url = artifactoryReaderUrl
+  }
+}
+
+dependencies { 
+	groovy "org.codehaus.groovy:groovy:1.8.8"
+}
+
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '1.3'
+  jarFile = '.gradle/wrapper/gradle-wrapper.jar'
+}
